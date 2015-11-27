@@ -1,0 +1,13 @@
+jquery-1.11.3.js
+jquery.js   jquery-2.1.4.js
+DOM操作插件
+
+jquery 1.x 向下兼容IE6/7/8
+jquery 2.x 不向下兼容，但是性能更高
+
+h5 开发使用2.x
+
+pc 开发使用1.x
+
+
+

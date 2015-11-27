@@ -1,3 +1,9 @@
+# grunt´ò°üÒÀÀµÄ£¿é
+**/node_modules/**
+*.rar
+*.zip
+.project
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
@@ -13,6 +19,7 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+
 
 # Windows shortcuts
 *.lnk

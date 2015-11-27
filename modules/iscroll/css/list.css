@@ -1,0 +1,24 @@
+
+.data-list{
+	
+}
+.data-list>.list-item{
+	padding: 10px;
+	font-size: 1.2rem;
+	color: #333;
+	border-bottom: 1px dashed #ccc;
+}
+.data-list>.list-item:nth-child(2n+1){
+	background: #f1f1f1;
+}
+.data-list>.list-item:nth-child(2n){
+	background: #e8e8e8;	
+}
+
+
+.test{
+	background: url(../../app/images/d_01.jpg?v=201511261830) no-repeat;
+}
+.test2{
+	background: url(../../app/images/w_01.jpg?v=201511261830) no-repeat;
+}

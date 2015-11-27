@@ -1,0 +1,76 @@
+(function($){
+	"use strcit";
+	
+	
+	var PageView={
+		collection:null,
+		liTemplate:null,
+		options:{
+			start:0,
+			size:20,
+			total:0
+		},
+		initialize:function(){
+			var $this=this;
+			var total=1000;
+			$this.options.total=total;
+			$this.collection=new Collections(total);
+			$this.liTemplate=_.template($('#li-template').html())
+			$this.initScroll();
+			$this.fetch();
+		},
+		initScroll:function(){
+			var $this=this;
+			var myScroll = new LiteScroll('#list-box', { 
+				bounce:true,
+				scrollbars: true,
+				mouseWheel: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'scale',
+				fadeScrollbars: true
+			});
+	
+			$this.myScroll=myScroll;
+		},
+	    fetch:function(start){
+			var $this=this;
+			$this.options.start= $.isNumeric(start) ? start : $('.data-list>.list-item').length;
+			$this.collection.fetch($this.options.start
+				,$this.options.size
+				,function(records){
+				$this.render(records,$this.options.start);
+			});
+		},
+		addEvent:function(){
+			var $this=this,scroll=$this.myScroll;
+			scroll.on('scrollStart',function(){
+				console.log('开始滚动',this.y);
+			});
+			// 滚动结束
+			scroll.on('scrollEnd',function(){
+				console.log('结束滚动',this.y);
+			});
+		},
+		render:function(records,isAppend){
+			var $this=this;
+			var _html= $this.liTemplate({records:records});
+			var tag=$('.data-list');
+			if(!isAppend){
+				tag.empty()	
+			}
+			tag.append(_html);
+			$this.change();
+		},
+		change:function(){
+			var $this=this;
+			$this.myScroll.change();
+		}
+	}
+	
+	$(function(){
+		PageView.initialize();
+		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+	})
+	
+	
+})(jQuery)

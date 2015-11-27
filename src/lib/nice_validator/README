@@ -1,0 +1,16 @@
+nice validator 
+基于jquery 的表单验证插件
+api：http://niceue.com/validator/download.php
+
+
+文件说明：
+	images -- 图片目录
+	loading.gif
+	validator_default.png
+	validator_simple.png
+	local -- 存放本地化配置的目录
+	zh_CN.js -- 验证配置文件（简体中文）
+	jquery.validator.css -- 产品环境使用的样式文件
+	jquery.validator.js -- 产品环境使用的核心js文件
+
+
