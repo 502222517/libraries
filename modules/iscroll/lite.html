@@ -1,50 +1,5 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
-	    <meta name="apple-mobile-web-app-capable" content="yes" />
-	    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
-	    <meta content="telephone=no" name="format-detection"/>
-	    <meta content="email=no" name="format-detection"/>
-	    <title>iscroll-移动滚动案例</title>
-	    <link rel="stylesheet" href="../common/css/basis.css?v=201511261830" />
-	    <link rel="stylesheet" href="../../lib/iscroll/css/iscroll.css?v=201511261830" />
-	    <link rel="stylesheet" href="css/list.css?v=201511261830" />
-	</head>
-	<body>
-		 
-		<div id='list-box'  class="full-srceen-scroll" >
-		    <div class="scroller">
-		        <div class="pullDown hide">
-		            <span class="pullDownIcon"></span>
-		            <span class="pullDownLabel" ></span>
-		        </div>
-		        <ul class="scroll-main data-list">
-		        	
-		        </ul>
-		        <div class="pullUp hide">
-		            <span class="pullUpIcon"></span>
-		            <span class="pullUpLabel" ></span>
-		        </div>
-		    </div>
-		</div>
-		 
-		<script type="text/html" id="li-template">
-			<% _.each(records,function(m){%>
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0;"><meta name="apple-mobile-web-app-capable" content="yes"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta content="email=no" name="format-detection"><title>iscroll-移动滚动案例</title><link rel="stylesheet" href="../common/css/basis.css?v=201511301447"><link rel="stylesheet" href="../../lib/iscroll/css/iscroll.css?v=201511301447"><link rel="stylesheet" href="css/list.css?v=201511301447"></head><body><div id="list-box" class="full-srceen-scroll"><div class="scroller"><div class="pullDown hide"><span class="pullDownIcon"></span> <span class="pullDownLabel"></span></div><ul class="scroll-main data-list"></ul><div class="pullUp hide"><span class="pullUpIcon"></span> <span class="pullUpLabel"></span></div></div></div><script type="text/html" id="li-template"><% _.each(records,function(m){%>
 				<li class="list-item scroll-item" data-id='<%=m.id%>'>
 					<%=m.title%>
 				</li>
-			<% }) %>
-		</script>
-		
-		<script type="text/javascript" src="../../lib/underscore/underscore.js?v=201511261830" ></script> 
-		<script type="text/javascript" src="../../lib/jquery/jquery.js?v=201511261830" ></script>
-		<script type="text/javascript" src="../../lib/iscroll/iscroll-probe.js?v=201511261830"></script>
-		<script type="text/javascript" src="../../lib/iscroll/my-scroll-lite.js?v=201511261830"></script>
-		<script type="text/javascript" src="../common/js/basis.js?v=201511261830" ></script>
-		<script type="text/javascript" src="js/collections.js?v=201511261830"></script>
-		<script type="text/javascript" src="js/lite.js?v=201511261830"></script>
-	</body>
-</html>
+			<% }) %></script><script type="text/javascript" src="../../lib/underscore/underscore.js?v=201511301447"></script><script type="text/javascript" src="../../lib/jquery/jquery.js?v=201511301447"></script><script type="text/javascript" src="../../lib/iscroll/iscroll-probe.js?v=201511301447"></script><script type="text/javascript" src="../../lib/iscroll/my-scroll-lite.js?v=201511301447"></script><script type="text/javascript" src="../common/js/basis.js?v=201511301447"></script><script type="text/javascript" src="js/collections.js?v=201511301447"></script><script type="text/javascript" src="js/lite.js?v=201511301447"></script></body></html>
