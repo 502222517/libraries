@@ -52,7 +52,6 @@ var Cache={
 			// [".png?", "png", "?", ""] 共4块
 			newLink=linkText.replace(pattern,format);
 		}else{
-//			var character=match[3] ? match[3] :( exist ? '&':'');
 			newLink=linkText.replace(regex,'$1' + now + '$3');
 		}
 		
