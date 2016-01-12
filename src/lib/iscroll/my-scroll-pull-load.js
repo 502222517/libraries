@@ -178,12 +178,17 @@
 						$this.pullUpEl.removeClass('flip').addClass('loading');
 						$this.pullUpLabel.html(cfg.loadingText);
 						$this.loadingStep = 2;
-						cfg.nextPage();
+						setTimeout(function(){
+							cfg.nextPage();
+						},300);
 					}else if($this.pullDownEl.hasClass('flip')){ // 下拉
 						$this.pullDownEl.removeClass('flip').addClass('loading');
 						$this.pullDownLabel.html(cfg.loadingText);
 						$this.loadingStep = 2;
-						cfg.prevPage();
+						setTimeout(function(){
+							cfg.prevPage();	
+						},300);
+						
 					}
 				}
 //				console.log('滚动结束',this.y);
