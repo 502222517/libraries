@@ -82,7 +82,14 @@ var Cache={
 	 */
 	htmls:function(content){  // 
 		var $this=this,temp;
-		var matches=content.match($this.tagRegexs.imgTag);
+		var matches=content.match($this.tagRegexs.htmlTag);
+		// a链接标签 .html 添加版本号
+		if(matches  && matches.length){
+			Array.prototype.forEach.call(matches,function(v,i){
+				temp=$this.setVersion(v,$this.regexs.html);
+				content=content.replace(v,temp);
+			});
+		}
 		// img 标签 添加版本号
 		if(matches  && matches.length){
 			Array.prototype.forEach.call(matches,function(v,i){

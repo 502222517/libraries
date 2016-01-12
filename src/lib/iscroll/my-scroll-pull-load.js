@@ -232,19 +232,17 @@
 		},
 		adapt:function(){ //自动适应整个区域
 			var $this=this;
-			var tag=$($this.cfg.listEl,$this.$el);
-			var items=$($this.cfg.listItemEl,tag);
-			var scrollHeight=$this.$el.height();
-			var boxHeight=tag.height();
-			var h=0;
-			for(var i=0,len=items.length;i<len;i++){
-				h+=items.eq(i).outerHeight();
-			}
-			if(scrollHeight>h){
+	  	  	var tag=$($this.cfg.listEl,$this.$el);
+	  	  	var scrollHeight=$this.$el.height();
+	  	  	tag.css('height','auto');
+	  	  	var boxHeight=tag.height();
+	  	  	
+	  	  	if(scrollHeight>boxHeight){
 				tag.css('height',scrollHeight+1);
 			}else{
 				tag.css('height','auto');
 			}
+			// end
 		}
 	}
 	
